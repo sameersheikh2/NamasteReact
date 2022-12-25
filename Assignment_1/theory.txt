@@ -1,0 +1,34 @@
+1.) What is Emmet - 
+    
+    Emmet is a plug-in for text editors that helps to write code/assist in html,css,xml etc. in faster way. It allow us to type short keywords and expands it into full code.
+
+2.) Difference between a Library and Framework - 
+
+    While using a Library we have the flow and control on our code, in case of Framework, Framework has the flow and control of our code.
+
+3.) What is CDN? Why do we use it -
+
+    CDN stands for Content Delivery Network, which is some interconnected servers that provide web content which is cached.
+    we use CDN because it provide web content faster by providing us cached data avaialable to the nearest server to the user with reduce latency.
+
+4.) Why is React known as React -
+
+    React known as react is because in my opinion it reacts and render components and update states on input, events, submit form etc. so basically it reacts on user events, inputs and on other functionalities.
+
+5.) What is crossorigin in script tag -
+
+    crossorigin is a attribute which allow us to have CORS support in our script tag, by which we can handle cross origing requests.
+
+6.) What is diference between React and ReactDOM -
+
+    React is core Library which provide us core functionality and features of react.
+    React DOM stands for Document Object Model which allow us to use React features and functionality on browser to create web pages and manipulate DOM tree.
+
+7.) What is difference between react.development.js and react.production.js files via CDN -
+
+    react.development.js cdn is for development purpose only which is not very optimised and have bigger size in compare to react.production.js , on the other hand react.production.js files is more stable and smaller in size to use in production based work to provide faster and stable performance in our production work.
+
+8.) What is async and defer -
+
+    In async when browser parse html code and reached to script tag with async, it fetch script  parallelly and after scripts are fetched it stops html parsing and execute script then start html parsing again.
+    In case of defer, html code parse and parallelly script fetched and once html parsing completed then it execute script.
