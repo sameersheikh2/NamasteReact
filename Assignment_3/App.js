@@ -15,9 +15,14 @@ const container2 = (
   </div>
 );
 
+const Title = () => {
+  return <h1>This is a title inside another component</h1>;
+};
+
 const Container2 = () => {
   return (
     <div className="title2">
+      <Title />
       <h1>This is heading 1 </h1>
       <h2> This is heading 2</h2>
       <h3>This is heading 3</h3>
