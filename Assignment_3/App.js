@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./style.css";
 
 const container = React.createElement("div", { className: "title" }, [
   React.createElement("h1", {}, "this is heading 1"),
@@ -30,5 +31,21 @@ const Container2 = () => {
   );
 };
 
+const Header = () => {
+  return (
+    <div className="header">
+      <h1>LOGO</h1>
+      <div>
+        <input type="text" name="search" id="" />
+        <button>Search</button>
+      </div>
+      <img
+        src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png"
+        alt="user-icon"
+      />
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Container2 />);
+root.render(<Header />);
