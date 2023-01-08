@@ -15,5 +15,15 @@ const container2 = (
   </div>
 );
 
+const Container2 = () => {
+  return (
+    <div className="title2">
+      <h1>This is heading 1 </h1>
+      <h2> This is heading 2</h2>
+      <h3>This is heading 3</h3>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render({ container2 });
+root.render(<Container2 />);
