@@ -751,16 +751,16 @@ const Header = () => {
   );
 };
 
-const RestaurantList = (props) => {
+const RestaurantList = ({ restaurant }) => {
   return (
     <div className="restaurant_list">
       <img
-        src={IMG_CDN_URL + props.restaurant.data.cloudinaryImageId}
+        src={IMG_CDN_URL + restaurant.data.cloudinaryImageId}
         width="200px"
         alt="img"
       />
-      <h5>{props.restaurant.data.name}</h5>
-      <h5>{props.restaurant.data.area}</h5>
+      <h5>{restaurant.data.name}</h5>
+      <h5>{restaurant.data.area}</h5>
     </div>
   );
 };
