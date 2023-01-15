@@ -751,27 +751,24 @@ const Header = () => {
   );
 };
 
-const RestaurantList = ({ restaurant }) => {
+const RestaurantList = ({ name, area, cloudinaryImageId }) => {
   return (
     <div className="restaurant_list">
-      <img
-        src={IMG_CDN_URL + restaurant.data.cloudinaryImageId}
-        width="200px"
-        alt="img"
-      />
-      <h5>{restaurant.data.name}</h5>
-      <h5>{restaurant.data.area}</h5>
+      <img src={IMG_CDN_URL + cloudinaryImageId} width="200px" alt="img" />
+      <h5>{name}</h5>
+      <h5>{area}</h5>
     </div>
   );
 };
 const RestaurantCard = () => {
   return (
     <div className="card">
-      <RestaurantList restaurant={restaurantList[0]} />
-      <RestaurantList restaurant={restaurantList[1]} />
-      <RestaurantList restaurant={restaurantList[2]} />
-      <RestaurantList restaurant={restaurantList[3]} />
-      <RestaurantList restaurant={restaurantList[4]} />
+      <RestaurantList {...restaurantList[0].data} />
+      <RestaurantList {...restaurantList[1].data} />
+      <RestaurantList {...restaurantList[2].data} />
+      <RestaurantList {...restaurantList[3].data} />
+      <RestaurantList {...restaurantList[4].data} />
+      <RestaurantList {...restaurantList[5].data} />
     </div>
   );
 };
