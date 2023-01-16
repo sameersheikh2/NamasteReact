@@ -751,29 +751,30 @@ const Header = () => {
   );
 };
 
-const RestaurantList = ({ name, area, cloudinaryImageId }) => {
+const RestaurantCard = ({
+  name,
+  cuisines,
+  lastMileTravelString,
+  cloudinaryImageId,
+}) => {
   return (
     <div className="restaurant_list">
-      <img src={IMG_CDN_URL + cloudinaryImageId} width="200px" alt="img" />
-      <h5>{name}</h5>
-      <h5>{area}</h5>
+      <img src={IMG_CDN_URL + cloudinaryImageId} width="100%" alt="img" />
+      <h2>{name}</h2>
+      <h3>{cuisines.join(", ")}</h3>
+      <h4>{lastMileTravelString} minutes</h4>
     </div>
   );
 };
-const RestaurantCard = () => {
+
+const Body = () => {
   return (
     <div className="card">
-      <RestaurantList {...restaurantList[0].data} />
-      <RestaurantList {...restaurantList[1].data} />
-      <RestaurantList {...restaurantList[2].data} />
-      <RestaurantList {...restaurantList[3].data} />
-      <RestaurantList {...restaurantList[4].data} />
-      <RestaurantList {...restaurantList[5].data} />
+      {restaurantList.map((restaurant) => (
+        <RestaurantCard {...restaurant.data} />
+      ))}
     </div>
   );
-};
-const Body = () => {
-  return <RestaurantCard />;
 };
 
 const AppLayout = () => {
