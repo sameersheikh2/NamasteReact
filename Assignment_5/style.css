@@ -42,3 +42,8 @@
 .search-res {
   margin: 5px;
 }
+
+.search-btn {
+  cursor: pointer;
+  margin: 1px;
+}

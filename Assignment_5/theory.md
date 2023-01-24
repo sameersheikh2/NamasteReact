@@ -19,8 +19,23 @@
         we can export it as
         import Title from './abc.js
 
-3. * export as
+3.  - export as
 
-    - when we use * as export it will export all the components as an object with properties which we can use as obj.components.
+    * when we use \* as export it will export all the components as an object with properties which we can use as obj.components.
 
-     Example - {}
+    Example - import \* as title from "./Title.js"
+
+                title.Title
+                title.Heading
+
+# what is the importance of config.js file?
+
+- we can use config.js file to store a common value that we need to use in more than one place. using the config file we can modify the value in one place whenever needed.
+
+# What are React hooks?
+
+- React hooks provide us with the functionality to manage the state in our components.
+
+# Why do we need a useState hook?
+
+- useState hooks provide us to create state variables in our components. State variables allow React to update the state and trigger reconciliation to render the change.

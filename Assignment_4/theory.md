@@ -27,3 +27,19 @@
 - virtual DOM is a virtual representation of the DOM tree that react uses to compare and render changes.
 
 # what is reconciliation in react?
+
+- reconciliation is a process that React uses to compare and render changes between virtual dom.
+
+# What is React Fiber?
+
+- react fiber is a new reconciliation process that React uses to load components faster and smoother.
+
+# Why do we need a key in React? When do we need keys in React?
+ 
+ - React needs keys to identify what was changed, added or removed.  We need keys in react when we create a list of elements. 
+
+# Can we use the index as a key in react?
+
+ - React does not recommend using the index as a key as item order can be changed. When we don't have unique keys in lists so as a last resort we can use the index as the key.
+
+
