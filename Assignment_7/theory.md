@@ -80,3 +80,23 @@ console.log(dogName); //output : Error: Cannot read properties of undefined (rea
 
 - const json = await data.json() is being used here for the promise to be fulfilled and then parsing the promise to return as a JavaScript object.
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/",
+        element: <Body />,
+      },
+    ],
+  },
+]);
