@@ -42,4 +42,3 @@
 
  - React does not recommend using the index as a key as item order can be changed. When we don't have unique keys in lists so as a last resort we can use the index as the key.
 
-

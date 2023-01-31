@@ -8,12 +8,12 @@
 
 3.) What is CDN? Why do we use it -
 
-    CDN stands for Content Delivery Network, which is some interconnected servers that provide web content which is cached.
-    we use CDN because it provide web content faster by providing us cached data avaialable to the nearest server to the user with reduce latency.
+    CDN stands for Content Delivery Network, which is some interconnected servers that provide web content that is cached.
+    we use CDN because it provides web content faster by providing us with cached data available to the nearest server to the user with reduced latency.
 
 4.) Why is React known as React -
 
-    React known as react is because in my opinion it reacts and render components and update states on input, events, submit form etc. so basically it reacts on user events, inputs and on other functionalities.
+    React known as react is because in my opinion it reacts and renders components and updates states on input, events, submits form etc. so basically it reacts to user events, inputs and on other functionalities.
 
 5.) What is crossorigin in script tag -
 
@@ -24,7 +24,7 @@
     React is core Library which provide us core functionality and features of react.
     React DOM stands for Document Object Model which allow us to use React features and functionality on browser to create web pages and manipulate DOM tree.
 
-7.) What is difference between react.development.js and react.production.js files via CDN -
+7.) What is the difference between react.development.js and react.production.js files via CDN -
 
     react.development.js cdn is for development purpose only which is not very optimised and have bigger size in compare to react.production.js , on the other hand react.production.js files is more stable and smaller in size to use in production based work to provide faster and stable performance in our production work.
 

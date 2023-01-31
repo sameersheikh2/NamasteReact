@@ -1,4 +1,4 @@
-# What is the difference between named export and default export and \* as export ?
+# What is the difference between named export and default export and "\*" as export ?
 
 1.  named export
 

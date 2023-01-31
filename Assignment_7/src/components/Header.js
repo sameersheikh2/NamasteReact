@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <img src={foodzilla_tp} alt="logo" />
+      <Link to="/">
+        <img src={foodzilla_tp} alt="logo" />
+      </Link>
       <ul>
         <Link to="/">
           <li>Home</li>
