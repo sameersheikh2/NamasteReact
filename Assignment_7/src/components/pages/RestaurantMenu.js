@@ -19,8 +19,13 @@ const RestaurantMenu = () => {
 
   return (
     <div>
-      <h1>{restaurant.name}</h1>
+      <h1>{restaurant?.name}</h1>
       <img src={IMG_CDN_URL + restaurant.cloudinaryImageId} alt="" />
+      <ul>
+        {Object.values(restaurant?.menu?.items).map((i) => (
+          <li>{i.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
