@@ -1,26 +1,36 @@
-# What are various ways to add images to our App? Explain with code examples
+# How do you create Nested Routes react-router-dom configuration?
 
-1.  By providing the path or URL of the image in <img/ >.
+- To create nested routes inside the react-router-dom configuration we need to create children property inside our route object and add nested routes inside. After that, we can use <Outlet/> component to render the child route element.
 
-- <img src="https://example.com/img.png" alt="image" / >
+# What is the order of life cycle method calls in Class Based Components?
 
-2. Adding the image from our project by importing the image.
-   import image from "./src/image.png"
+- order of life cycle method calls in the class-based components-
 
-- <img src={image} alt="image">
+  **First initial render phase ->**
 
-# What would happen if we do console.log(useState())?
+  1. constructor()
+  2. render()
+  3. componentDidMount()
 
-- if we do a console.log(useState()) then it will give us an array [undefined, function].
-  where the first element undefined is the initial state and the second is a function that bound dispatchSetState(used for updating the state).
+     **Updating phase ->**
 
-# What is SPA?
+     1. render()
+     2. componentDidUpdate()
 
-- Single Page Application (SPA) is a web implementation that shows a single document and updates the body content based on changes without reloading the whole page.
+# Why do we use componentDidMount?
 
-# What is the difference between Client Side Routing and Server Side Routing?
+- componentDidMount() gets called after the component is mounted into the dom tree. this is a good place to make API requests.
 
-- In Server Side Routing whenever we visit a site in the browser, it requests the server for the HTML page and then loads the page into the browser. Every time we click on a link to visit another page, the browser requests the server and then loads the HTML page. Rendering these pages can take a few milliseconds but sometimes it may take seconds to load.
+# Why do we use componentWillUnmount()? Show with example
 
-- In Client-Side Routing browser loads the content using JavaScript. So instead of requesting the server for the HTML page, we loads the page into the browser using JavaScript.
+- ComponentWillUnmount() gets called immediately before the component unmounts or the user navigates to a different page to perform clean-up. This clean-up could be clear intervals or stop sending requests to the server.
+  Example ->
+  componentDidMount() {
+  this.timer = setInterval(() => {
+  console.log("interval running");
+  }, 1000);
 
+      console.log("parent did mount");
+      }
+
+  above interval event will keep running even after the user leaves the page and it will create a new event each time the user visits the same page resulting in multiple events. To clean this up we could use componentWillUnmount() to clear the function.
