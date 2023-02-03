@@ -9,9 +9,7 @@ const Body = () => {
 
   const searchRestaurant = () => {
     const filteredRes = allRestaurants.filter((restaurant) =>
-      restaurant.data.name
-        .toLocaleLowerCase()
-        .includes(searchText.toLocaleLowerCase())
+      restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilteredRestaurants(filteredRes);
   };
