@@ -24,7 +24,7 @@ const Body = () => {
           }}
           className="search-btn"
         >
-          Search
+          Search 
         </button>
       </div>
       {allRestaurants.length === 0 ? (

@@ -105,3 +105,10 @@
     background-color: hsl(200, 20%, 80%);
   }
 }
+
+.err {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

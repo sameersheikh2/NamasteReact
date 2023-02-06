@@ -10,7 +10,12 @@ const useRestaurantMenu = (id) => {
           id
       );
       const data = await res.json();
-      setRestaurant(data.data);
+      console.log(data.statusCode);
+      if (data.statusCode !== 404) {
+        setRestaurant(data.data);
+      } else {
+        setRestaurant([]);
+      }
     };
     getMenu();
   }, []);

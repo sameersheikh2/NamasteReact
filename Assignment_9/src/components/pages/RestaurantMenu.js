@@ -6,7 +6,6 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantMenu = () => {
   const { id } = useParams();
   const restaurant = useRestaurantMenu(id);
-  console.log(restaurant);
   return (
     <div>
       <h1>{restaurant?.name}</h1>

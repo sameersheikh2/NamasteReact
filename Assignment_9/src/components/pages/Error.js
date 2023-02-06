@@ -1,11 +1,15 @@
 import React from "react";
 import error from "../../assets/error.gif";
+import Header from "../Header";
 
 const Error = () => {
   return (
-    <div>
-      <img src={error} alt="error" />
-    </div>
+    <>
+      <Header />
+      <div className="err">
+        <img src={error} alt="error" />
+      </div>
+    </>
   );
 };
 
