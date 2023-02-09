@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Filter from "../Filter";
 import RestaurantCard from "../RestaurantList";
 import Shimmer from "../Shimmer";
 import useRestaurant from "../utils/useRestaurant";
@@ -33,6 +34,7 @@ const Body = () => {
         </button>
       </div>
       <span className="">{searchResult}</span>
+      <Filter />
       {allRestaurants.length === 0 ? (
         <Shimmer num={15} />
       ) : (
