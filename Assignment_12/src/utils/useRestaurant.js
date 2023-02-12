@@ -13,7 +13,7 @@ const useRestaurant = () => {
       try {
         const res = await fetch(fetchRestaurantBy);
         const data = await res.json();
-        console.log(data.data?.cards);
+        console.log(data.data?.cards[2]?.data?.data?.cards);
         if (fetchRestaurantBy === ALL_RESTAURANT) {
           setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
           setAllRestaurants(data.data?.cards[2]?.data?.data?.cards);

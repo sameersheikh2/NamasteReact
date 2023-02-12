@@ -7,11 +7,11 @@ const Header = () => {
   // const cartItem = useSelector((state) => state.cart.items);
 
   return (
-    <div className="flex lg:justify-between justify-center p-5 items-center shadow-md mb-10">
+    <div className="flex lg:justify-between justify-center p-4 items-center shadow-md mb-2">
       <Link to="/">
         <img src={foodzilla_tp} alt="logo" className="w-[240px] h-[70px] " />
       </Link>
-      <ul className="flex text-[22px]">
+      <ul className="lg:flex hidden text-[22px]">
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 bg-[#c56e33] text-white">
           Login
         </li>
