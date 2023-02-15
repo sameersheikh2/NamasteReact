@@ -4,7 +4,7 @@ import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 const RestaurantItems = ({ items }) => {
   return (
     <div className="flex">
-      <div className="flex justify-between items-center m-auto border-b-[1px] my-7 p-5 w-[620px] ">
+      <div className="flex flex-wrap justify-between items-center m-auto border-b-[1px] my-7 p-5 w-[620px] ">
         <div className="flex flex-col w-[25rem] ">
           <span>
             <RadioButtonCheckedIcon

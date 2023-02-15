@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Filter from "../components/Filter";
-import RestaurantCard from "../components/RestaurantList";
+import RestaurantList from "../pages/RestaurantList";
 import Shimmer from "../components/Shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { useSelector } from "react-redux";
@@ -41,7 +41,7 @@ const Body = () => {
       ) : (
         <div className="flex flex-wrap justify-center">
           {filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
+            <RestaurantList key={restaurant.data.id} {...restaurant.data} />
           ))}
         </div>
       )}

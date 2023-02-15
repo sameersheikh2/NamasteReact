@@ -2,7 +2,7 @@ import React from "react";
 
 const Shimmer = ({ num }) => {
   return (
-    <div className="w-full rounded flex justify-center flex-wrap animate-pulse">
+    <div className="rounded flex justify-center flex-wrap animate-pulse">
       {Array(num)
         .fill("")
         .map((e, index) => (

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ALL_RESTAURANT } from "../constants";
 
-const FetchRestaurantSlice = createSlice({
+const fetchRestaurantSlice = createSlice({
   name: "fetchBy",
   initialState: {
     fetchBy: ALL_RESTAURANT,
@@ -13,5 +13,5 @@ const FetchRestaurantSlice = createSlice({
   },
 });
 
-export const { fetchRestaurantBy } = FetchRestaurantSlice.actions;
-export default FetchRestaurantSlice.reducer;
+export const { fetchRestaurantBy } = fetchRestaurantSlice.actions;
+export default fetchRestaurantSlice.reducer;

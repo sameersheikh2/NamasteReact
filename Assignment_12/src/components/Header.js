@@ -1,6 +1,7 @@
 import foodzilla_tp from "../assets/foodzilla_tp.svg";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { Badge } from "@mui/material";
 // import { useSelector, useDispatch } from "react-redux";
 
 const Header = () => {
@@ -27,9 +28,11 @@ const Header = () => {
         </Link>
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
           Cart
-          <ShoppingBagIcon
-            style={{ fontSize: "27px", margin: "0 4px 8px 6px" }}
-          />
+          <Badge badgeContent={0} color="warning">
+            <ShoppingBagIcon
+              style={{ fontSize: "27px", margin: "0 4px 8px 6px" }}
+            />
+          </Badge>
         </li>
       </ul>
     </div>
