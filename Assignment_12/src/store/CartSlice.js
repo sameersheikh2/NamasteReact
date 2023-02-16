@@ -2,10 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { items: ["apple", "banana", "cherry"] },
+  initialState: [],
   reducers: {
     addItem(state, action) {
-      state.items.push(action.payload);
+      const items = state.filter((item) => item.id === action.payload.id);
+      if (items.length === 0) {
+        const item = action.payload;
+        item.quantity = 1;
+        state.push(item);
+      } else {
+        state.map((item) =>
+          item.id === action.payload.id ? item.quantity++ : item
+        );
+      }
     },
   },
 });

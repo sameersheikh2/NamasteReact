@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import RestaurantItems from "../components/RestaurantItems";
+import MenuItemsCard from "../components/MenuItemsCard";
 import { IMG_CDN_URL } from "../constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
@@ -96,7 +96,7 @@ const RestaurantMenu = () => {
       </div>
       {restaurant.length !== 0 &&
         Object.values(restaurant?.menu?.items).map((items) => (
-          <RestaurantItems key={items.id} items={items} />
+          <MenuItemsCard key={items.id} items={items} />
         ))}
     </div>
   );

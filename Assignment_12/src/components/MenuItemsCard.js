@@ -1,7 +1,15 @@
 import { IMG_CDN_URL } from "../constants";
+import { useDispatch } from "react-redux";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import { addItem } from "../store/cartSlice";
 
-const RestaurantItems = ({ items }) => {
+const MenuItemsCard = ({ items }) => {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (items) => {
+    dispatch(addItem(items));
+  };
+
   return (
     <div className="flex">
       <div className="flex flex-wrap justify-between items-center m-auto border-b-[1px] my-7 p-5 w-[620px] ">
@@ -26,7 +34,10 @@ const RestaurantItems = ({ items }) => {
             src={IMG_CDN_URL + items?.cloudinaryImageId}
             alt={items?.name}
           />
-          <button className="w-24 absolute top-[80px] py-2 text-green-600 text-xs font-semibold left-[28px] border-[1px] border-gray-400 bg-white hover:shadow-xl duration-200 ease">
+          <button
+            className="w-24 absolute top-[80px] py-2 text-green-600 text-xs font-semibold left-[28px] border-[1px] border-gray-400 bg-white hover:shadow-xl duration-200 ease"
+            onClick={() => addToCartHandler(items)}
+          >
             ADD+
           </button>
         </div>
@@ -35,4 +46,4 @@ const RestaurantItems = ({ items }) => {
   );
 };
 
-export default RestaurantItems;
+export default MenuItemsCard;

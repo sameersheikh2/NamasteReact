@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Error from "./pages/Error";
+import Error from "./components/Error";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import { Provider } from "react-redux";
 import store from "./store/store";
