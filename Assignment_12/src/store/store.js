@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartSlice from "./cartSlice";
-import fetchRestaurantSlice from "./fetchRestaurantSlice";
+import CartSlice from "./CartSlice";
+import FetchRestaurantSlice from "./FetchRestaurantSlice";
 
 const store = configureStore({
   reducer: {
-    cart: cartSlice,
-    fetchBy: fetchRestaurantSlice,
+    cart: CartSlice,
+    fetchBy: FetchRestaurantSlice,
   },
 });
 
