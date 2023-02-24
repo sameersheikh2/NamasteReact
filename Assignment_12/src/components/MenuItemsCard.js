@@ -5,7 +5,6 @@ import { addItem } from "../store/cartSlice";
 
 const MenuItemsCard = ({ items }) => {
   const dispatch = useDispatch();
-
   const addToCartHandler = (items) => {
     dispatch(addItem(items));
   };

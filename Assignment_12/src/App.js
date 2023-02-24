@@ -9,6 +9,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import Cart from "./pages/Cart";
 
 const About = lazy(() => import("./pages/About"));
 
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

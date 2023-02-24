@@ -3,7 +3,7 @@ import Filter from "../components/Filter";
 import RestaurantList from "../pages/RestaurantList";
 import Shimmer from "../components/Shimmer";
 import useRestaurant from "../utils/useRestaurant";
-import { useSelector } from "react-redux";
+
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -35,7 +35,7 @@ const Body = () => {
         </button>
       </div>
       <span className="">{searchResult}</span>
-      <Filter />
+      {searchResult.length === 0 && <Filter />}
       {allRestaurants.length === 0 ? (
         <Shimmer num={15} />
       ) : (

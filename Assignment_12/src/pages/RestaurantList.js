@@ -14,7 +14,7 @@ const RestaurantList = ({
   aggregatedDiscountInfo,
 }) => {
   return (
-    <div className="w-[254px] hover:shadow-xl m-8 rounded hover:scale-105 cursor-pointer duration-150 ease">
+    <div className="w-[265px] hover:border-[1px] hover:border-black p-2 hover:shadow-xl m-4 rounded hover:scale-105 cursor-pointer duration-150 ease">
       <Link to={"/restaurant/" + id}>
         <img
           className="rounded"

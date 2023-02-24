@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import MenuItemsCard from "../components/MenuItemsCard";
 import { IMG_CDN_URL } from "../constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
@@ -10,7 +10,6 @@ import Shimmer from "../components/Shimmer";
 const RestaurantMenu = () => {
   const { id } = useParams();
   const restaurant = useRestaurantMenu(id);
-  console.log(restaurant);
   const {
     locality,
     area,
@@ -20,9 +19,9 @@ const RestaurantMenu = () => {
     name,
     totalRatingsString,
   } = restaurant;
-  console.log(restaurant?.aggregatedDiscountInfo?.descriptionList[1]?.meta);
   return (
     <div>
+      {restaurant === 404 && <Navigate to="/" />}
       <div className="flex mt-4 md:w-full w-auto md:flex-row flex-col p-9 items-center justify-center bg-black/80">
         {restaurant.length == 0 ? (
           <Shimmer num={3} />
@@ -94,10 +93,11 @@ const RestaurantMenu = () => {
           </>
         )}
       </div>
-      {restaurant.length !== 0 &&
-        Object.values(restaurant?.menu?.items).map((items) => (
-          <MenuItemsCard key={items.id} items={items} />
-        ))}
+      {restaurant.length !== 0 && restaurant !== 404
+        ? Object.values(restaurant?.menu?.items).map((items) => (
+            <MenuItemsCard key={items.id} items={items} />
+          ))
+        : null}
     </div>
   );
 };

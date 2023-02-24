@@ -16,28 +16,26 @@ const Header = () => {
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 bg-[#c56e33] text-white">
           Login
         </li>
-        <Link to="/about">
-          <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
-            About
-          </li>
-        </Link>
-        <Link to="/contact">
-          <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
-            Contact Us
-          </li>
-        </Link>
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
-          Cart
-          <Badge
-            badgeContent={cartItem
-              .map((q) => q.quantity)
-              .reduce((a, b) => a + b, 0)}
-            color="warning"
-          >
-            <ShoppingBagIcon
-              style={{ fontSize: "27px", margin: "0 4px 8px 6px" }}
-            />
-          </Badge>
+          <Link to="/about">About</Link>
+        </li>
+        <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
+          <Link to="/contact">Contact Us</Link>
+        </li>
+        <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
+          <Link to="/cart">
+            Cart
+            <Badge
+              badgeContent={cartItem
+                .map((q) => q.quantity)
+                .reduce((a, b) => a + b, 0)}
+              color="warning"
+            >
+              <ShoppingBagIcon
+                style={{ fontSize: "27px", margin: "0 4px 8px 6px" }}
+              />
+            </Badge>
+          </Link>
         </li>
       </ul>
     </div>

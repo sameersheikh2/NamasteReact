@@ -13,7 +13,6 @@ const useRestaurant = () => {
       try {
         const res = await fetch(fetchRestaurantBy);
         const data = await res.json();
-        console.log(data.data?.cards[2]?.data?.data?.cards);
         if (fetchRestaurantBy === ALL_RESTAURANT) {
           setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
           setAllRestaurants(data.data?.cards[2]?.data?.data?.cards);
@@ -27,6 +26,7 @@ const useRestaurant = () => {
     };
     getRestaurant();
   }, [fetchRestaurantBy]);
+
   const searchRestaurant = (searchText) => {
     const filteredRes = allRestaurants.filter((restaurant) =>
       restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
