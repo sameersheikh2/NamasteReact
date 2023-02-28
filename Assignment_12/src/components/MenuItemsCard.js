@@ -1,7 +1,7 @@
 import { IMG_CDN_URL } from "../constants";
 import { useDispatch } from "react-redux";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
-import { addItem } from "../store/cartSlice";
+import { addItem } from "../store/CartSlice";
 
 const MenuItemsCard = ({ items }) => {
   const dispatch = useDispatch();
