@@ -102,3 +102,11 @@
 # Why do we have .postcssrc file?
 
 .postcssrc file uses a plugin to parse our tailwindcss classes into CSS so our bundler can use tailwindcss classes in our app.
+
+# What is prop drilling?
+
+- Prop drilling is a technique where data is passed from one component through multiple components until it gets to the component where the data is needed. The data could be passed from the parent component to the children's children component.
+
+# What is lifting the state up?
+
+- Lifting the state up means giving the state control of children components to the closest parent component and then passing the data as props.
