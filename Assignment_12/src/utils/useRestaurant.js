@@ -32,7 +32,7 @@ const useRestaurant = () => {
       restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
     );
     if (filteredRes.length === 0) {
-      setSearchResult("No restaurant found");
+      setSearchResult(["No restaurant found", searchText]);
     } else {
       setSearchResult("");
     }

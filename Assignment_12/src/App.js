@@ -10,6 +10,7 @@ import RestaurantMenu from "./pages/RestaurantMenu";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import Cart from "./pages/Cart";
+import LogIn from "./pages/LogIn";
 
 const About = lazy(() => import("./pages/About"));
 
@@ -53,6 +54,7 @@ const appRouter = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
+      { path: "/login", element: <LogIn /> },
     ],
   },
 ]);

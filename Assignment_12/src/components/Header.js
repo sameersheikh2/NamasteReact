@@ -14,7 +14,7 @@ const Header = () => {
       </Link>
       <ul className="md:flex hidden text-[22px]">
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 bg-[#c56e33] text-white">
-          Login
+          <Link to="/login">Login</Link>
         </li>
         <li className="hover:bg-[#c56e33] duration-200 ease rounded px-2 hover:text-white font-semibold m-3 text-[#c56e33]">
           <Link to="/about">About</Link>
