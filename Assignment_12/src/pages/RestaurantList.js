@@ -56,7 +56,7 @@ const RestaurantList = ({
                     margin: "0 4px 4px 0",
                   }}
                 />
-                {aggregatedDiscountInfoV3?.header + " " aggregatedDiscountInfoV3?.subHeader}
+                {aggregatedDiscountInfoV3?.header}
               </span>
             </div>
           </div>
