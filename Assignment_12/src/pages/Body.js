@@ -56,7 +56,7 @@ const Body = () => {
       ) : (
         <div className="flex flex-wrap justify-center">
           {filteredRestaurants.map((restaurant) => (
-            <RestaurantList key={restaurant.data.id} {...restaurant.data} />
+            <RestaurantList key={restaurant.info.id} {...restaurant.info} />
           ))}
         </div>
       )}
