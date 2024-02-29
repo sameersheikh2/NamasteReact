@@ -11,7 +11,7 @@ const RestaurantList = ({
   costForTwo,
   sla,
   avgRating,
-  aggregatedDiscountInfo,
+  aggregatedDiscountInfoV3,
 }) => {
   return (
     <div className="w-[265px] hover:border-[1px] hover:border-black p-2 hover:shadow-xl m-4 rounded hover:scale-105 cursor-pointer duration-150 ease">
@@ -56,7 +56,7 @@ const RestaurantList = ({
                     margin: "0 4px 4px 0",
                   }}
                 />
-                {aggregatedDiscountInfo?.shortDescriptionList[0].meta}
+                {aggregatedDiscountInfo?.header + " " aggregatedDiscountInfoV3?.subHeader}
               </span>
             </div>
           </div>
