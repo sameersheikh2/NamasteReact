@@ -14,8 +14,8 @@ const useRestaurant = () => {
         const res = await fetch(fetchRestaurantBy);
         const data = await res.json();
         if (fetchRestaurantBy === ALL_RESTAURANT) {
-          setFilteredRestaurants(data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-          setAllRestaurants(data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setFilteredRestaurants(data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setAllRestaurants(data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         } else {
           setFilteredRestaurants(data.data?.cards[0]?.data?.data?.cards);
           setAllRestaurants(data.data?.cards[0]?.data?.data?.cards);
