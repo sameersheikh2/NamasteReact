@@ -48,7 +48,7 @@ const RestaurantList = ({
               <span className="mt-3 text-sm">| {sla.deliveryTime} minutes</span>
               <span className="mt-3 text-sm">| {costForTwo}</span>
             </div>
-            <div className="pt-3 text-sm  text-[#c56e33] font-medium">
+{aggregatedDiscountInfoV3.length > 0 ? <div className="pt-3 text-sm  text-[#c56e33] font-medium">
               <span>
                 <LocalOfferIcon
                   style={{
@@ -57,8 +57,9 @@ const RestaurantList = ({
                   }}
                 />
                 {aggregatedDiscountInfoV3?.header}
+                + " " {aggregatedDiscountInfoV3?.subHeader}
               </span>
-            </div>
+            </div> : null}
           </div>
         </div>
       </Link>
