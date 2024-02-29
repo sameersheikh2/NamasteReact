@@ -8,8 +8,8 @@ const RestaurantList = ({
   cuisines,
   cloudinaryImageId,
   id,
-  costForTwoString,
-  deliveryTime,
+  costForTwo,
+  sla,
   avgRating,
   aggregatedDiscountInfo,
 }) => {
@@ -45,8 +45,8 @@ const RestaurantList = ({
                 />
                 {avgRating}
               </span>
-              <span className="mt-3 text-sm">| {deliveryTime} minutes</span>
-              <span className="mt-3 text-sm">| {costForTwoString}</span>
+              <span className="mt-3 text-sm">| {sla.deliveryTime} minutes</span>
+              <span className="mt-3 text-sm">| {costForTwo}</span>
             </div>
             <div className="pt-3 text-sm  text-[#c56e33] font-medium">
               <span>
